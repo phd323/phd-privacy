@@ -3,31 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Profile Hub Dossier</title>
+    <title>Profile Hub Dossier — Support & Privacy</title>
     <style>
+        /* BRAND COLORS FROM app_theme.dart */
+        :root {
+            --primary: #7E57C2;
+            --accent: #FF6F61;
+            --background: #FDFBFE;
+            --surface: #FFFFFF;
+            --text-primary: #1C1B1F;
+            --text-secondary: #757575;
+            --border: #E0E0E0;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 40px;
-            color: #333;
-            line-height: 1.8;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--background);
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #222; margin-top: 2.5em; border-left: 4px solid #007AFF; padding-left: 15px; }
-        h3 { color: #444; margin-top: 1.5em; }
-        p, ul { margin-bottom: 1.5em; }
-        li { margin-bottom: 10px; }
-        .highlight { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
-        footer { margin-top: 50px; font-size: 0.9em; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
+
+        header { text-align: center; margin: 40px 0; }
+        header h1 { color: var(--primary); font-size: 2.2em; margin-bottom: 10px; }
+
+        /* TAB NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        nav button {
+            background: none;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-secondary);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav button.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        /* CONTENT SECTIONS */
+        .section { display: none; background: var(--surface); padding: 40px; border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+        .section.active { display: block; }
+
+        /* SUPPORT UI */
+        .support-container { text-align: center; }
+        .icon-box { font-size: 50px; margin-bottom: 20px; color: var(--primary); }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+            transition: transform 0.2s;
+        }
+        .btn-primary:active { transform: scale(0.98); }
+
+        .reveal-box {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            display: inline-block;
+            min-width: 280px;
+        }
+        .reveal-text { color: var(--text-secondary); font-size: 14px; margin-bottom: 10px; }
+        .email-display { 
+            font-family: monospace; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: var(--primary); 
+            cursor: pointer;
+            padding: 8px;
+            background: #f4f2f8;
+            border-radius: 8px;
+        }
+
+        /* PRIVACY CONTENT STYLES */
+        h2 { color: var(--text-primary); margin-top: 1.5em; border-left: 4px solid var(--accent); padding-left: 15px; }
+        h3 { color: var(--text-secondary); margin-top: 1.2em; }
+        .highlight { background: #F4F2F8; padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 20px 0; }
+        footer { text-align: center; margin-top: 60px; color: var(--text-secondary); font-size: 14px; }
+
+        /* UTILITY */
+        .hidden { display: none; }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Profile Hub Dossier</h1>
+    <p>Management Hub for You & Your Loved Ones</p>
+</header>
+
+<nav>
+    <button onclick="showTab('support')" id="tab-support" class="active">Support</button>
+    <button onclick="showTab('privacy')" id="tab-privacy">Privacy</button>
+    <button onclick="showTab('manual')" id="tab-manual" class="hidden">Manual</button>
+</nav>
+
+<div id="support" class="section active support-container">
+    <div class="icon-box">✉️</div>
+    <h2>Need Help?</h2>
+    <p>Our team is here to assist with your profiles, subscriptions, or technical questions.</p>
+    
+    <a href="mailto:ProfileHubDossier@gmail.com?subject=PHD%20Support%20Request" class="btn-primary">
+        Open Email App
+    </a>
+
+    <div style="margin: 10px 0; color: var(--text-secondary);">— or —</div>
+
+    <div class="reveal-box">
+        <p class="reveal-text">PC user or having trouble? Click below to reveal and copy address:</p>
+        <div id="email-box" class="email-display" onclick="revealAndCopy()">[ Tap to Reveal Email ]</div>
+    </div>
+</div>
+
+<div id="privacy" class="section">
     <h1>Privacy Policy</h1>
     <p><strong>Last updated: April 12, 2026</strong></p>
-    <p>This Privacy Policy explains how <strong>Profile Hub Dossier (PHD)</strong> collects, uses, and protects your information when you use our app. We only collect what is necessary to provide you with a working, secure experience.</p>
-    <p>By using the app, you agree to the practices described in this policy.</p>
+    <p>This Privacy Policy explains how <strong>Profile Hub Dossier (PHD)</strong> collects, uses, and protects your information. We prioritize your privacy and only collect what is essential for secure app functionality.</p>
 
     <h2>1. Interpretation and Definitions</h2>
     <p><strong>Application (App):</strong> Profile Hub Dossier (PHD).<br>
@@ -36,67 +147,67 @@
 
     <h2>2. What We Collect and Why</h2>
     <h3>Personal Data</h3>
-    <p>We may ask for the following information:</p>
     <ul>
-        <li><strong>Email Address:</strong> Used to identify your account and restore your purchase if you reinstall the app. When you make a purchase, we may collect your Apple ID identifier and associated email to link your subscription across devices.</li>
+        <li><strong>Email Address:</strong> Used to identify your account and restore purchases.</li>
     </ul>
 
     <h3>Usage Data</h3>
-    <p>We automatically collect limited data to keep the app running smoothly:</p>
     <ul>
-        <li><strong>App Statistics:</strong> Number of app opens, last open date, and current app version.</li>
-        <li><strong>Device Platform:</strong> Whether you are on iOS or Android.</li>
-        <li><strong>Device Identifier (IDFV):</strong> A vendor-specific device identifier provided by iOS. Used solely to prevent trial abuse (e.g. detecting reinstalls). This is not an advertising identifier and cannot be used to track you across other apps.</li>
-
+        <li><strong>App Statistics:</strong> Number of app opens and version tracking.</li>
+        <li><strong>Device Identifier (IDFV):</strong> Used solely to prevent trial abuse on iOS. Not used for tracking across other apps.</li>
     </ul>
-    <p>We do <strong>not</strong> collect your profile content. All data you enter into your Core Profiles stays on your device only.</p>
+    <p class="highlight"><strong>Core Privacy:</strong> We do NOT collect your profile content. All data you enter into your Core Profiles stays on your device only.</p>
 
     <h2>3. Purchases and Subscriptions</h2>
-    <p>To manage your access to premium features, we work with trusted third-party services:</p>
-    <div class="highlight">
-        <p><strong>Note:</strong> When you purchase through Sign In with Apple, your Apple ID identifier and email (if provided by Apple) are used to link your account with RevenueCat. This allows us to restore your purchase history if you reinstall the app or switch devices.</p>
-    </div>
-    <ul>
-        <li><strong>Apple App Store:</strong> Handles all payments. We never see or store your credit card details.</li>
-        <li><strong>RevenueCat:</strong> Tracks your subscription status, trial period, renewals, and cancellations.</li>
-    </ul>
+    <p>When you purchase through Sign In with Apple, your Apple ID identifier is used by <strong>RevenueCat</strong> to manage your subscription status securely.</p>
 
-    <h2>4. How We Use Your Data</h2>
-    <ul>
-        <li>To keep your account active and your subscription status up to date.</li>
-        <li>To restore your purchase if you reinstall the app.</li>
-        <li>To contact you about important account or service updates.</li>
-        <li>To monitor app performance and fix issues.</li>
-    </ul>
+    <h2>4. Data Storage</h2>
+    <p>Account data is stored securely in <strong>Google Firebase (Firestore)</strong>, encrypted at rest and in transit.</p>
 
-    <h2>5. Data Storage and Retention</h2>
-    <p>Your account data — including your email, subscription dates, and app usage stats — is stored securely in <strong>Google Firebase (Firestore)</strong>, which encrypts data both at rest and in transit.</p>
-    <p>We keep your data only as long as needed. If you delete your account, all personal data is removed within 30 days. Anonymized purchase records may be retained longer for legal and accounting purposes as required by Apple.</p>
+    <h2>5. Contact Us</h2>
+    <p>Questions? Reach us at: <strong>ProfileHubDossier@gmail.com</strong></p>
+</div>
 
-    <h2>6. Who We Share Data With</h2>
-    <p>We do not sell your data. We only share data with the following services that are essential to running the app:</p>
-    <ul>
-        <li><strong>Google LLC (Firebase):</strong> Data storage and anonymous authentication.</li>
-        <li><strong>RevenueCat, Inc.:</strong> Subscription and purchase management.</li>
-        <li><strong>Apple Inc.:</strong> Payment processing.</li>
-    </ul>
+<div id="manual" class="section">
+    <h2>User Manual</h2>
+    <p>Tutorials and guides are coming soon.</p>
+</div>
 
-    <h2>7. Your Rights and Data Deletion</h2>
-    <p>You can delete all your personal data at any time directly inside the app under Settings → Delete My Data. This removes everything we hold about you from our servers. To cancel an active subscription, visit your App Store subscription settings.</p>
+<footer>
+    <p>&copy; 2026 Profile Hub Dossier. All rights reserved.</p>
+</footer>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>We may update this policy from time to time. Any changes will be posted on this page with an updated date at the top.</p>
+<script>
+    // Tab Switching Logic
+    function showTab(tabId) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        
+        document.getElementById(tabId).classList.add('active');
+        document.getElementById('tab-' + tabId).classList.add('active');
+    }
 
-    <h2>9. Contact Us</h2>
-    <p>Questions about this policy? Reach us at:</p>
-    <ul>
-        <li>Email: <strong>fryinocean@gmail.com</strong></li>
-        <li>Website: <strong>https://phd323.github.io/phd-privacy</strong></li>
-    </ul>
-
-    <footer>
-        <p>&copy; 2026 Profile Hub Dossier. All rights reserved.</p>
-    </footer>
+    // Secure Reveal & Copy Logic
+    function revealAndCopy() {
+        const email = "ProfileHubDossier" + "@" + "gmail.com";
+        const box = document.getElementById('email-box');
+        
+        // Show the email
+        box.innerText = email;
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText(email).then(() => {
+            const originalText = email;
+            box.innerText = "✓ Copied to Clipboard!";
+            box.style.color = "#4CAF50"; // Green for success
+            
+            setTimeout(() => {
+                box.innerText = originalText;
+                box.style.color = "var(--primary)";
+            }, 2000);
+        });
+    }
+</script>
 
 </body>
 </html>
