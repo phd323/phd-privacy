@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Hub Dossier — Support & Privacy</title>
     <style>
+        /* BRAND COLORS FROM app_theme.dart */
         :root {
             --primary: #7E57C2;
             --accent: #FF6F61;
@@ -28,6 +29,7 @@
         header { text-align: center; margin: 40px 0; }
         header h1 { color: var(--primary); font-size: 2.2em; margin-bottom: 5px; }
 
+        /* TAB NAVIGATION */
         nav {
             display: flex;
             justify-content: center;
@@ -46,21 +48,23 @@
             color: var(--text-secondary);
             border-bottom: 3px solid transparent;
             white-space: nowrap;
+            transition: all 0.3s ease;
         }
         nav button.active {
             color: var(--primary);
             border-bottom: 3px solid var(--primary);
         }
 
-        .section { display: none; background: var(--surface); padding: 30px; border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+        /* CONTENT SECTIONS */
+        .section { display: none; background: var(--surface); padding: 35px; border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
         .section.active { display: block; }
 
         /* MANUAL STYLES */
-        .manual-step { margin-bottom: 30px; }
-        .manual-step h3 { color: var(--primary); border-bottom: 1px solid #f4f2f8; padding-bottom: 8px; }
-        .manual-step ul { padding-left: 20px; }
-        .manual-step li { margin-bottom: 8px; }
-        .tip-box { background: #f4f2f8; padding: 15px; border-radius: 12px; font-size: 14px; border-left: 4px solid var(--accent); }
+        .manual-step { margin-bottom: 35px; }
+        .manual-step h3 { color: var(--primary); border-bottom: 1px solid #f4f2f8; padding-bottom: 8px; margin-bottom: 15px; }
+        .manual-step ul, .manual-step ol { padding-left: 20px; }
+        .manual-step li { margin-bottom: 10px; }
+        .tip-box { background: #f4f2f8; padding: 15px; border-radius: 12px; font-size: 14px; border-left: 4px solid var(--accent); margin-top: 10px; }
 
         /* SUPPORT UI */
         .support-container { text-align: center; }
@@ -72,15 +76,20 @@
             border-radius: 16px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
             margin: 20px 0;
+            transition: transform 0.2s;
         }
+        .btn-primary:active { transform: scale(0.98); }
         .email-display { 
             font-family: monospace; font-size: 16px; font-weight: bold; color: var(--primary); 
             cursor: pointer; padding: 12px; background: #f4f2f8; border-radius: 8px; display: inline-block;
+            margin-top: 10px;
         }
 
         /* PRIVACY CONTENT */
-        .highlight { background: #F4F2F8; padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary); }
+        h2 { color: var(--text-primary); margin-top: 1.5em; border-left: 4px solid var(--accent); padding-left: 15px; }
+        .highlight { background: #F4F2F8; padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 20px 0; }
         footer { text-align: center; margin-top: 60px; color: var(--text-secondary); font-size: 12px; padding-bottom: 40px; }
     </style>
 </head>
@@ -88,73 +97,85 @@
 
 <header>
     <h1>Profile Hub Dossier</h1>
-    <p>User Support & Legal Center</p>
+    <p>Official Manual, Support & Privacy Center</p>
 </header>
 
 <nav>
     <button onclick="showTab('manual')" id="tab-manual" class="active">User Manual</button>
-    <button onclick="showTab('support')" id="tab-support">Support</button>
+    <button onclick="showTab('support')" id="tab-support">Contact Support</button>
     <button onclick="showTab('privacy')" id="tab-privacy">Privacy Policy</button>
 </nav>
 
 <div id="manual" class="section active">
     <div class="manual-step">
         <h3>Step 1: Setup Your Contacts</h3>
-        <p>The app requires a Contact profile to function. You have two options:</p>
+        <p>The app requires a Contact profile to function. Tap the <strong>Person Icon</strong> in the <strong>bottom right of the home page</strong> to open the menu:</p>
         <ul>
-            <li><strong>Manual:</strong> Person Icon (Bottom Right) → Contact → Add Contact.</li>
-            <li><strong>Import:</strong> Person Icon → Contact → Import (Securely pull from your phone's local contacts).</li>
+            <li><strong>Access Contacts:</strong> Tap the <strong>Contact Icon</strong> within that sub-menu to open your contact options (Add, Edit, Import, Manage).</li>
+            <li><strong>Manual Entry:</strong> Tap <strong>Add Contact</strong> to enter details manually.</li>
+            <li><strong>Import:</strong> Tap <strong>Import</strong> to securely pull existing contacts directly from your phone's local contact list.</li>
         </ul>
-        <div class="tip-box"><strong>Tip:</strong> Tap the <strong>(i) Info Icon</strong> in the entry screen to see which fields are required to enable the Save button.</div>
+        <div class="tip-box"><strong>Tip:</strong> In the Add or Edit screens, tap the <strong>(i) Info Icon</strong> in the <strong>bottom right</strong> to see which fields are required to enable the Save button.</div>
     </div>
 
     <div class="manual-step">
         <h3>Step 2: The "+New" Workflow</h3>
         <ol>
-            <li>Tap <strong>+New</strong> to open the action menu.</li>
+            <li>Tap the <strong>+New</strong> button at the bottom of the home page.</li>
             <li>Select an Action (Add, Edit, Report, or Manage) and a Profile (Moneyflow or Cosmetic).</li>
-            <li>Select your Contact and tap <strong>Date →</strong>.</li>
+            <li>Select your Contact and tap the <strong>Date →</strong> button.</li>
         </ol>
     </div>
 
     <div class="manual-step">
         <h3>Step 3: Selection & Confirmation</h3>
         <ul>
-            <li><strong>Add:</strong> Pick a single date.</li>
+            <li><strong>Add Action:</strong> Pick a single date from the calendar.</li>
             <li><strong>Edit/Manage/Report:</strong> Pick a date range.</li>
-            <li><strong>The Selection Page:</strong> If your date range contains more than one result, you will be prompted to <strong>tap and select</strong> the specific entry you wish to view or modify.</li>
-            <li><strong>Finalize:</strong> Tap the Save/New icon in the bottom sheet.</li>
+            <li><strong>The Selection Page:</strong> In some cases, if there are more than one result, you will be prompted to <strong>tap and select</strong> the specific entry in the selection page to proceed.</li>
         </ul>
     </div>
 
     <div class="manual-step">
         <h3>Step 4: System Feedback</h3>
-        <p>All system alerts (success or error) are "Zero-Interaction":</p>
         <ul>
-            <li>No confirmation buttons (Yes/No/OK) are required.</li>
-            <li>Messages automatically dismiss after <strong>3 seconds</strong>.</li>
+            <li>Messages without a "Yes," "No," "OK," or "Confirm" button will be <strong>automatically dismissed after 3 seconds</strong>. Simply wait for the screen to clear.</li>
         </ul>
     </div>
 </div>
 
 <div id="support" class="section support-container">
     <h2>Contact Us</h2>
-    <p>Have a question? Reach out directly via your email app:</p>
-    <a href="mailto:ProfileHubDossier@gmail.com?subject=PHD%20Support" class="btn-primary">Open Email App</a>
-    <p>Or tap below to copy our address:</p>
+    <p>Have a question or feedback? Reach out directly via your email app:</p>
+    <a href="mailto:ProfileHubDossier@gmail.com?subject=PHD%20Support%20Request" class="btn-primary">Open Email App</a>
+    
+    <div style="margin: 10px 0; color: var(--text-secondary);">— or —</div>
+    
+    <p style="font-size: 14px; color: var(--text-secondary);">PC user? Tap below to copy our support address:</p>
     <div id="email-box" class="email-display" onclick="revealAndCopy()">[ Tap to Reveal Email ]</div>
 </div>
 
 <div id="privacy" class="section">
-    <h2>Privacy Policy</h2>
+    <h1>Privacy Policy</h1>
     <p><strong>Last updated: April 12, 2026</strong></p>
-    <p>Profile Hub Dossier only collects what is essential for account management and purchase restoration. <strong>All profile data entered into the app remains strictly on your local device.</strong></p>
+    <p>Profile Hub Dossier (PHD) is committed to your privacy. We only collect essential information required to manage your account and restore purchases.</p>
+    
+    <div class="highlight">
+        <strong>Data Ownership:</strong> All profile content, inventory details, and financial logs stay strictly on your local device. We do not collect or see your personal dossiers.
+    </div>
+
+    <h2>1. Data Collection</h2>
     <ul>
-        <li><strong>Email:</strong> Used for account recovery.</li>
-        <li><strong>IDFV:</strong> Used to prevent trial abuse on iOS.</li>
+        <li><strong>Email:</strong> Used for account recovery and identifying subscription status.</li>
+        <li><strong>Usage Data:</strong> Anonymous statistics (app opens, version) to help us improve performance.</li>
+        <li><strong>IDFV:</strong> A vendor-specific identifier used solely to prevent trial abuse on iOS.</li>
     </ul>
-    <p>Data is stored securely in Google Firebase and managed via RevenueCat for subscriptions.</p>
-    <p>Contact: ProfileHubDossier@gmail.com</p>
+
+    <h2>2. Third-Party Services</h2>
+    <p>We use <strong>Google Firebase</strong> for secure data storage and <strong>RevenueCat</strong> for subscription management. Payments are handled exclusively by the <strong>Apple App Store</strong>.</p>
+
+    <h2>3. Contact</h2>
+    <p>Reach us at: <strong>ProfileHubDossier@gmail.com</strong></p>
 </div>
 
 <footer>
@@ -162,22 +183,34 @@
 </footer>
 
 <script>
+    // Tab switching logic
     function showTab(tabId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        
         document.getElementById(tabId).classList.add('active');
         document.getElementById('tab-' + tabId).classList.add('active');
     }
 
+    // Secure Reveal & Copy logic
     function revealAndCopy() {
         const email = "ProfileHubDossier" + "@" + "gmail.com";
         const box = document.getElementById('email-box');
+        
         box.innerText = email;
+        
         navigator.clipboard.writeText(email).then(() => {
+            const originalText = email;
             box.innerText = "✓ Copied to Clipboard!";
-            setTimeout(() => { box.innerText = email; }, 2000);
+            box.style.color = "#4CAF50"; 
+            
+            setTimeout(() => {
+                box.innerText = originalText;
+                box.style.color = "var(--primary)";
+            }, 2000);
         });
     }
 </script>
+
 </body>
 </html>
