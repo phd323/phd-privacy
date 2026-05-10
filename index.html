@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Hub Dossier — Support & Privacy</title>
     <style>
-        /* BRAND COLORS FROM app_theme.dart */
         :root {
             --primary: #7E57C2;
             --accent: #FF6F61;
@@ -29,7 +28,6 @@
         header { text-align: center; margin: 40px 0; }
         header h1 { color: var(--primary); font-size: 2.2em; margin-bottom: 5px; }
 
-        /* TAB NAVIGATION */
         nav {
             display: flex;
             justify-content: center;
@@ -55,18 +53,15 @@
             border-bottom: 3px solid var(--primary);
         }
 
-        /* CONTENT SECTIONS */
         .section { display: none; background: var(--surface); padding: 35px; border-radius: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
         .section.active { display: block; }
 
-        /* MANUAL STYLES */
         .manual-step { margin-bottom: 35px; }
         .manual-step h3 { color: var(--primary); border-bottom: 1px solid #f4f2f8; padding-bottom: 8px; margin-bottom: 15px; }
         .manual-step ul, .manual-step ol { padding-left: 20px; }
         .manual-step li { margin-bottom: 10px; }
         .tip-box { background: #f4f2f8; padding: 15px; border-radius: 12px; font-size: 14px; border-left: 4px solid var(--accent); margin-top: 10px; }
 
-        /* SUPPORT UI */
         .support-container { text-align: center; }
         .btn-primary {
             display: inline-block;
@@ -87,7 +82,6 @@
             margin-top: 10px;
         }
 
-        /* PRIVACY CONTENT */
         h2 { color: var(--text-primary); margin-top: 1.5em; border-left: 4px solid var(--accent); padding-left: 15px; }
         .highlight { background: #F4F2F8; padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary); margin: 20px 0; }
         footer { text-align: center; margin-top: 60px; color: var(--text-secondary); font-size: 12px; padding-bottom: 40px; }
@@ -123,7 +117,7 @@
         <ol>
             <li>Tap the <strong>+New</strong> button at the bottom of the home page.</li>
             <li>Select an Action (Add, Edit, Report, or Manage) and a Profile (Moneyflow or Cosmetic).</li>
-            <li>Select your Contact and tap the <strong>Date →</strong> button.</li>
+            <li>Select your Contact and tap the <strong>Date &rarr;</strong> button.</li>
         </ol>
     </div>
 
@@ -160,9 +154,9 @@
     <p><strong>Last updated: May 5, 2026</strong></p>
 
     <div class="highlight">
-    <strong>Our Core Commitment:</strong> Profile Hub Dossier is built on a local-first philosophy. 
-    Every single piece of profile data and personal record you create stays strictly on your device and is never uploaded, sold, or shared.
-</div>
+        <strong>Our Core Commitment:</strong> Profile Hub Dossier is built on a local-first philosophy. 
+        Every single piece of profile data and personal record you create stays strictly on your device and is never uploaded, sold, or shared.
+    </div>
 
     <br>
 
@@ -176,9 +170,10 @@
         <h3>2. What Data We Collect</h3>
         <p>We collect the absolute minimum necessary to operate the app:</p>
         <ul>
-            <li><strong>Email Address:</strong> Your email is the single key that lets our small team quickly locate your record and help you out if you ever reach out to support. That is why we ask for your email—and only your email—when you start a trial or buy a plan. We don't track your personal data. No spam, no marketing—just an easier way to look out for you.</li>
-            <li><strong>IDFV (Identifier for Vendor):</strong> A device-level identifier assigned by Apple. It is unique to our app on your device and resets if you uninstall the app. We use this solely to prevent free trial abuse — it cannot identify you personally and is never linked to your name or email.</li>
+            <li><strong>Email Address:</strong> Your email is required on the welcome page to enable the purchase options for Core and Pro plans. It is the single key that lets our small team quickly locate your record and help you if you ever reach out to support. No spam, no marketing — just an easier way to look out for you.</li>
+            <li><strong>IDFV (Identifier for Vendor):</strong> A device-level identifier assigned by Apple. It is unique to our app on your device and resets if you uninstall the app. We use this to prevent free trial abuse and to enforce device limits — free trial users are limited to one device, while Core and Pro plan users may install the app on up to 3 devices. This identifier is linked to your device and your email address, but never to your name, as we do not collect names.</li>
             <li><strong>Purchase & Subscription Status:</strong> Managed through RevenueCat to validate your subscription and restore purchases. No full payment or credit card details are ever stored by us.</li>
+            <li><strong>Promo Code:</strong> If you use a promo code, we record it to apply your discount and to recognize the person who shared it with you.</li>
         </ul>
         <div class="tip-box"><strong>Important:</strong> All profile content and personal records you enter into PHD are stored locally on your device only. We cannot see, access, or retrieve this data.</div>
     </div>
@@ -200,11 +195,11 @@
             <li>
                 <strong>Google Firebase</strong> — Used to securely store your account credentials (email) for login and account recovery. 
                 Firebase operates under Google's privacy standards. 
-                <a href="https://firebase.google.com/support/privacy" target="_blank">View Firebase Privacy Policy →</a>
+                <a href="https://firebase.google.com/support/privacy" target="_blank">View Firebase Privacy Policy &rarr;</a>
             </li>
             <li>
                 <strong>RevenueCat</strong> — Used to manage subscriptions and restore purchases. RevenueCat securely receives your email and anonymized device ID to maintain your subscription status and allow our support team to locate your purchase history. 
-                <a href="https://www.revenuecat.com/privacy" target="_blank">View RevenueCat Privacy Policy →</a>
+                <a href="https://www.revenuecat.com/privacy" target="_blank">View RevenueCat Privacy Policy &rarr;</a>
             </li>
         </ul>
         <p>No other third-party SDKs, ad networks, or analytics tools are used in this app.</p>
@@ -231,9 +226,8 @@
         <h3>7. Your Rights</h3>
         <p>You are in full control of your data:</p>
         <ul>
-            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will permanently delete your email and account data from Firebase within 30 days.</li>
-            <li><strong>Delete your local data:</strong> Simply uninstall the app. All local profile data is removed from your device.</li>
-            <li><strong>Access your data:</strong> Email us to request a summary of any account-level data we hold.</li>
+            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will permanently delete your account data (email, device ID, UID, and promo code if applicable) from our records.</li>
+            <li><strong>Delete your local data:</strong> Use the in-app Reset button to wipe all local data instantly, or simply uninstall the app. Either way, all profile data is permanently removed from your device.</li>
         </ul>
     </div>
 
@@ -253,37 +247,31 @@
     <div class="manual-step">
         <h3>10. Contact Us</h3>
         <p>For any privacy questions, data deletion requests, or concerns, please reach out:</p>
-        <p>📧 <strong>ProfileHubDossier@gmail.com</strong></p>
+        <p>&#128231; <strong>ProfileHubDossier@gmail.com</strong></p>
     </div>
 </div>
+
 <footer>
     &copy; 2026 Profile Hub Dossier. All rights reserved.
 </footer>
 
 <script>
-    // Tab switching logic
     function showTab(tabId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-        
         document.getElementById(tabId).classList.add('active');
         document.getElementById('tab-' + tabId).classList.add('active');
     }
 
-    // Secure Reveal & Copy logic
     function revealAndCopy() {
         const email = "ProfileHubDossier" + "@" + "gmail.com";
         const box = document.getElementById('email-box');
-        
         box.innerText = email;
-        
         navigator.clipboard.writeText(email).then(() => {
-            const originalText = email;
-            box.innerText = "✓ Copied to Clipboard!";
+            box.innerText = "Copied to Clipboard!";
             box.style.color = "#4CAF50"; 
-            
             setTimeout(() => {
-                box.innerText = originalText;
+                box.innerText = email;
                 box.style.color = "var(--primary)";
             }, 2000);
         });
