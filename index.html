@@ -1,3 +1,79 @@
+=============================================================================
+APP STORE DESCRIPTION
+=============================================================================
+
+Profile Hub Dossier: Your Universal Life Management Hub
+
+Manage your world and the people in it with precision. Profile Hub Dossier is a powerful multi-profile organizer designed to help you, your loved ones, and your professional clients stay organized, track expenses, and manage assets — all in one secure place.
+
+---
+
+Cosmetic Profile
+Organize diverse items across unique profiles for personal collections or professional clients.
+Manage dedicated profiles by skin type (Oily, Dry, Combination, etc.) or seasonal trends.
+Log key details: purchase date, price, quantity, and store location.
+Visualize your spending with dynamic reports and pie charts to spot premium purchases at a glance.
+
+---
+
+Moneyflow Profile
+Rapid entry system — no tedious typing. Just input an amount, date, and store and you're done.
+Family-centric tracking: manage dedicated spending records for children, parents, or the whole household.
+Automatic summaries: instantly see your top 3 highest-spending stores and most expensive items.
+Flexible time frames: use the date selector to view spending breakdowns for any period you choose.
+
+---
+
+Education Profile (Pro)
+Track academic journeys with dedicated profiles for each school or institution.
+Log your school name, major or field of study, and tuition records all in one place.
+Perfect for students, parents, or anyone managing multiple educational programs or dependents.
+
+---
+
+Import & Export (Pro)
+Switching phones? No problem. Easily export all your data and import it on your new device in seconds.
+Your data stays yours — always stored locally and fully under your control.
+
+---
+
+Pricing & Access
+
+PHD Pro — $29.99/year (or $23.99 with a promo code)
+Full access to Edit, Report, Import/Export, and the Education Profile. New features included while subscribed.
+
+Free Plan — Add and Manage, always free. No expiry, no payment required.
+
+Free Trial — 14 days of full Pro access. No card required to start.
+
+---
+
+Terms of Use
+https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Privacy Policy
+https://phd323.github.io/phd-privacy
+
+
+=============================================================================
+WHAT'S NEW TEXT (for v1.0 submission)
+=============================================================================
+
+Welcome to Profile Hub Dossier!
+
+- 14-day free trial — full access, no card needed
+- PHD Pro subscription at $29.99/year
+- Promo code support for a discounted first year
+- Cosmetic and Moneyflow profiles available to all users
+- Education Profile and Import/Export included with Pro
+- Local-first: all your data stays on your device
+
+
+=============================================================================
+PRIVACY POLICY — updated index.html
+(replace your current file at https://phd323.github.io/phd-privacy)
+=============================================================================
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,8 +152,8 @@
             transition: transform 0.2s;
         }
         .btn-primary:active { transform: scale(0.98); }
-        .email-display { 
-            font-family: monospace; font-size: 16px; font-weight: bold; color: var(--primary); 
+        .email-display {
+            font-family: monospace; font-size: 16px; font-weight: bold; color: var(--primary);
             cursor: pointer; padding: 12px; background: #f4f2f8; border-radius: 8px; display: inline-block;
             margin-top: 10px;
         }
@@ -119,6 +195,7 @@
             <li>Select an Action (Add, Edit, Report, or Manage) and a Profile (Moneyflow or Cosmetic).</li>
             <li>Select your Contact and tap the <strong>Date &rarr;</strong> button.</li>
         </ol>
+        <div class="tip-box"><strong>Free Plan:</strong> Add and Manage are always free. Edit, Report, and Import/Export require a PHD Pro subscription.</div>
     </div>
 
     <div class="manual-step">
@@ -126,7 +203,7 @@
         <ul>
             <li><strong>Add Action:</strong> Pick a single date from the calendar.</li>
             <li><strong>Edit/Manage/Report:</strong> Pick a date range.</li>
-            <li><strong>The Selection Page:</strong> In some cases, if there are more than one result, you will be prompted to <strong>tap and select</strong> the specific entry in the selection page to proceed.</li>
+            <li><strong>The Selection Page:</strong> If there is more than one result, you will be prompted to <strong>tap and select</strong> the specific entry in the selection page to proceed.</li>
         </ul>
     </div>
 
@@ -142,19 +219,19 @@
     <h2>Contact Us</h2>
     <p>Have a question or feedback? Reach out directly via your email app:</p>
     <a href="mailto:ProfileHubDossier@gmail.com?subject=PHD%20Support%20Request" class="btn-primary">Open Email App</a>
-    
+
     <div style="margin: 10px 0; color: var(--text-secondary);">— or —</div>
-    
+
     <p style="font-size: 14px; color: var(--text-secondary);">PC user? Tap below to copy our support address:</p>
     <div id="email-box" class="email-display" onclick="revealAndCopy()">[ Tap to Reveal Email ]</div>
 </div>
 
 <div id="privacy" class="section">
     <h2>Privacy Policy</h2>
-    <p><strong>Last updated: May 5, 2026</strong></p>
+    <p><strong>Last updated: May 2026</strong></p>
 
     <div class="highlight">
-        <strong>Our Core Commitment:</strong> Profile Hub Dossier is built on a local-first philosophy. 
+        <strong>Our Core Commitment:</strong> Profile Hub Dossier is built on a local-first philosophy.
         Every single piece of profile data and personal record you create stays strictly on your device and is never uploaded, sold, or shared.
     </div>
 
@@ -162,7 +239,7 @@
 
     <div class="manual-step">
         <h3>1. Who We Are</h3>
-        <p>Profile Hub Dossier ("PHD", "we", "our") is an independent app developer. 
+        <p>Profile Hub Dossier ("PHD", "we", "our") is an independent app developer.
         You can reach us at <strong>ProfileHubDossier@gmail.com</strong> for any privacy-related questions.</p>
     </div>
 
@@ -170,8 +247,7 @@
         <h3>2. What Data We Collect</h3>
         <p>We collect the absolute minimum necessary to operate the app:</p>
         <ul>
-            <li><strong>Email Address:</strong> Providing your email on the welcome page acts as a secure validation step to enable the <strong>Free Trial</strong> and <strong>Purchase</strong> interaction buttons. It serves as the single key that allows our small team to verify your account status and provide support if you reach out. We do not use your email for marketing or spam.</li>
-            <li><strong>IDFV (Identifier for Vendor):</strong> A device-level identifier assigned by Apple. It is unique to our app on your device and resets if you uninstall the app. We use this to prevent free trial abuse and to enforce device limits — free trial users are limited to one device, while Core and Pro plan users may install the app on up to 3 devices. This identifier is linked to your device and your email address, but never to your name, as we do not collect names.</li>
+            <li><strong>Email Address:</strong> Providing your email on the welcome page enables the Free Trial and purchase interaction buttons. It serves as the single key that allows our small team to verify your account status and provide support if you reach out. We do not use your email for marketing or spam.</li>
             <li><strong>Purchase & Subscription Status:</strong> Managed through RevenueCat to validate your subscription and restore purchases. No full payment or credit card details are ever stored by us.</li>
             <li><strong>Promo Code:</strong> If you use a promo code, we record it to apply your discount and to recognize the person who shared it with you.</li>
         </ul>
@@ -193,12 +269,12 @@
         <p>We use two trusted third-party services for core app functionality:</p>
         <ul>
             <li>
-                <strong>Google Firebase</strong> — Used to securely store your account credentials (email) for login and account recovery. 
-                Firebase operates under Google's privacy standards. 
+                <strong>Google Firebase</strong> — Used to securely store your account credentials (email) for login and account recovery.
+                Firebase operates under Google's privacy standards.
                 <a href="https://firebase.google.com/support/privacy" target="_blank">View Firebase Privacy Policy &rarr;</a>
             </li>
             <li>
-                <strong>RevenueCat</strong> — Used to manage subscriptions and restore purchases. RevenueCat securely receives your email and anonymized device ID to maintain your subscription status and allow our support team to locate your purchase history. 
+                <strong>RevenueCat</strong> — Used to manage subscriptions and restore purchases. RevenueCat securely receives your email and anonymized device ID to maintain your subscription status and allow our support team to locate your purchase history.
                 <a href="https://www.revenuecat.com/privacy" target="_blank">View RevenueCat Privacy Policy &rarr;</a>
             </li>
         </ul>
@@ -207,8 +283,8 @@
 
     <div class="manual-step">
         <h3>5. Contact Permissions (Optional)</h3>
-        <p>PHD can optionally import contacts from your phone's local address book to help you set up profiles faster. 
-        This is entirely optional — you can always add contacts manually. 
+        <p>PHD can optionally import contacts from your phone's local address book to help you set up profiles faster.
+        This is entirely optional — you can always add contacts manually.
         Contact data pulled into the app remains on your device and is never transmitted to our servers.</p>
     </div>
 
@@ -226,21 +302,20 @@
         <h3>7. Your Rights</h3>
         <p>You are in full control of your data:</p>
         <ul>
-            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will permanently delete your account data (email, device ID, UID, and promo code if applicable) from our records.</li>
+            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will permanently delete your account data (email, UID, and promo code if applicable) from our records.</li>
             <li><strong>Delete your local data:</strong> Use the in-app Reset button to wipe all local data instantly, or simply uninstall the app. Either way, all profile data is permanently removed from your device.</li>
         </ul>
     </div>
 
     <div class="manual-step">
         <h3>8. Children's Privacy</h3>
-        <p>PHD is not directed at children under the age of 13. We do not knowingly collect personal information from children. 
+        <p>PHD is not directed at children under the age of 13. We do not knowingly collect personal information from children.
         If you believe a child has provided us with personal data, please contact us immediately and we will delete it promptly.</p>
     </div>
 
     <div class="manual-step">
         <h3>9. Changes to This Policy</h3>
         <p>We may update this Privacy Policy from time to time as the app grows and adds new features. When we do, we will update the "Last updated" date at the top of this page. Profile Hub Dossier reserves the right of final interpretation regarding the terms and explanations within this policy. Your continued use of the app after changes are posted constitutes your formal acceptance of the updated policy.</p>
-</div>
     </div>
 
     <div class="manual-step">
@@ -268,7 +343,7 @@
         box.innerText = email;
         navigator.clipboard.writeText(email).then(() => {
             box.innerText = "Copied to Clipboard!";
-            box.style.color = "#4CAF50"; 
+            box.style.color = "#4CAF50";
             setTimeout(() => {
                 box.innerText = email;
                 box.style.color = "var(--primary)";
