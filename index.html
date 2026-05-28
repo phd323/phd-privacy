@@ -60,7 +60,40 @@
         .manual-step h3 { color: var(--primary); border-bottom: 1px solid #f4f2f8; padding-bottom: 8px; margin-bottom: 15px; }
         .manual-step ul, .manual-step ol { padding-left: 20px; }
         .manual-step li { margin-bottom: 10px; }
+        
         .tip-box { background: #f4f2f8; padding: 15px; border-radius: 12px; font-size: 14px; border-left: 4px solid var(--accent); margin-top: 10px; }
+
+        /* New Warning Card Style */
+        .warning-card {
+            background-color: #F8F9FA;
+            border: 1px solid #EAEAEA;
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 35px;
+        }
+        .warning-icon {
+            font-size: 22px;
+            line-height: 1.2;
+        }
+        .warning-text {
+            color: var(--text-primary);
+        }
+        .warning-text strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .warning-text p {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+        }
+        .warning-text p:last-child {
+            margin: 0;
+        }
 
         .support-container { text-align: center; }
         .btn-primary {
@@ -100,12 +133,23 @@
     <button onclick="showTab('privacy')" id="tab-privacy">Privacy Policy</button>
 </nav>
 
+<!-- ===================== USER MANUAL ===================== -->
 <div id="manual" class="section active">
 
     <div class="manual-step">
-        <h3>Step 0: Subscription & Free Trial</h3>
-        <p>On first launch, you will see the Paywall. Tap <strong>Continue to Purchase</strong> to begin your <strong>14-day free trial</strong> — full access to all features from day one, managed by Apple. Tap <strong>Restore Previous Purchase</strong> if you have subscribed before.</p>
-        <div class="tip-box"><strong>Free Tier & Pro:</strong> Add and Manage are always free for Cosmetic and Moneyflow profiles. Edit, Report, Export/Import, and the Edu Profile require a PHD Pro subscription — which includes a 14-day free trial with full access from day one.</div>
+        <h3>Welcome to Profile Hub Dossier</h3>
+        <p>Dear Profile Hub Dossier user,</p>
+        <p>Thank you so much for choosing Profile Hub Dossier! The PHD team is here to provide the details you need to understand and use this app effectively.</p>
+        <p>On your first launch, you will be greeted by the welcome page. Simply input your email address and tap <strong>Start Your Free Trial</strong> to open the subscription page. From there, tap the button displaying the price and <strong>14-Day Free Trial</strong> to start exploring the app with full access to all features from day one. The PHD team does NOT charge you during this free 14-day trial period. More details can be found in the notice below.</p>
+    </div>
+
+    <div class="warning-card">
+        <div class="warning-icon">⚠️</div>
+        <div class="warning-text">
+            <strong>Purchase and Free Trial</strong>
+            <p>The PHD app itself does NOT ask for your credit card or payment information. Furthermore, you will not be charged if you cancel your subscription within the 14-day free trial window. Because subscriptions are managed securely through your app store, please contact Apple or RevenueCat for specific billing details and inquiries.</p>
+            <p>If you have subscribed before, just tap <strong>Restore Previous Purchase</strong>. If you have any app-related questions, feel free to contact us at ProfileHubDossier@gmail.com.</p>
+        </div>
     </div>
 
     <div class="manual-step">
@@ -156,6 +200,7 @@
 
 </div>
 
+<!-- ===================== SUPPORT ===================== -->
 <div id="support" class="section support-container">
     <h2>Contact Us</h2>
     <p>Have a question or feedback? Reach out directly via your email app:</p>
@@ -167,6 +212,7 @@
     <div id="email-box" class="email-display" onclick="revealAndCopy()">[ Tap to Reveal Email ]</div>
 </div>
 
+<!-- ===================== PRIVACY POLICY ===================== -->
 <div id="privacy" class="section">
     <h2>Privacy Policy</h2>
     <p><strong>Last updated: May 26, 2026</strong></p>
