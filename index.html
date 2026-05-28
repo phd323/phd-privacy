@@ -100,7 +100,6 @@
     <button onclick="showTab('privacy')" id="tab-privacy">Privacy Policy</button>
 </nav>
 
-<!-- ===================== USER MANUAL ===================== -->
 <div id="manual" class="section active">
 
     <div class="manual-step">
@@ -157,7 +156,6 @@
 
 </div>
 
-<!-- ===================== SUPPORT ===================== -->
 <div id="support" class="section support-container">
     <h2>Contact Us</h2>
     <p>Have a question or feedback? Reach out directly via your email app:</p>
@@ -169,15 +167,13 @@
     <div id="email-box" class="email-display" onclick="revealAndCopy()">[ Tap to Reveal Email ]</div>
 </div>
 
-<!-- ===================== PRIVACY POLICY ===================== -->
 <div id="privacy" class="section">
     <h2>Privacy Policy</h2>
     <p><strong>Last updated: May 26, 2026</strong></p>
 
     <div class="highlight">
         <strong>Our Core Commitment:</strong> Profile Hub Dossier is built on a local-first philosophy.
-        Every piece of profile data and personal record you create stays strictly on your device — the PHD team never uploads, sells, or shares it.
-        Third-party services we rely on (Firebase and RevenueCat) handle only what's necessary to run your account and subscription, under their own privacy policies linked in Section 4.
+        Profile data and personal records you create are designed to be stored locally on your device. The PHD team itself does not upload, sell, or share this local data. We rely on trusted third-party services (like Firebase and RevenueCat) for core operations, which handle data independently under their own privacy policies (see Section 4).
     </div>
 
     <br>
@@ -190,76 +186,73 @@
 
     <div class="manual-step">
         <h3>2. What Data We Collect</h3>
-        <p>We collect the absolute minimum necessary to operate the app:</p>
+        <p>We collect only the data necessary to operate your account and the app's features:</p>
         <ul>
-            <li><strong>Email Address:</strong> Your email is the key that links your account to your subscription and purchase history. It allows our team to verify your account status, restore access if needed, and provide support if you reach out. We do not use your email for marketing or spam.</li>
-            <li><strong>Purchase & Subscription Status:</strong> Managed through RevenueCat to validate your subscription and restore purchases. No full payment or credit card details are ever stored by us.</li>
+            <li><strong>Email Address:</strong> Your email is used to ID your account and link it to your subscription and purchase history. It allows our team to verify your account status, restore access if needed, and provide support. We do not use your email for marketing or spam.</li>
+            <li><strong>Purchase & Subscription Status:</strong> Managed through RevenueCat to validate your subscription and restore purchases. No full payment or credit card details are stored by our team.</li>
         </ul>
-        <div class="tip-box"><strong>Important:</strong> All profile content and personal records you enter into PHD are stored locally on your device only. We cannot see, access, or retrieve this data.</div>
+        <div class="tip-box"><strong>Important:</strong> Profile content and personal records you enter into PHD are stored locally on your device. The PHD team does not see, access, or retrieve this local data.</div>
     </div>
 
     <div class="manual-step">
         <h3>3. What We Do NOT Collect</h3>
         <ul>
             <li>We do <strong>NOT</strong> collect your name, location, or phone number.</li>
-            <li>We do <strong>NOT</strong> sell, rent, or trade your data to any third party, ever.</li>
-            <li>We do <strong>NOT</strong> access your camera, microphone, or photo library without explicit permission.</li>
-            <li>We do <strong>NOT</strong> use analytics SDKs to track your in-app behavior. Our subscription provider RevenueCat may collect limited product interaction data (such as paywall views) solely to manage your subscription — this data is not linked to your identity and is never used for advertising.</li>
+            <li>We do <strong>NOT</strong> sell, rent, or trade your data to any third party.</li>
+            <li>We do <strong>NOT</strong> access your camera, microphone, or photo library without your explicit permission requested through your device's operating system.</li>
+            <li>We do <strong>NOT</strong> use our own analytics SDKs to track your behavior. Subscription providers may collect limited interaction data (like paywall views) solely to manage services, which is not linked to your identity for advertising.</li>
         </ul>
     </div>
 
     <div class="manual-step">
         <h3>4. Third-Party Services</h3>
-        <p>We use two trusted third-party services for core app functionality:</p>
+        <p>We utilize trusted third-party services for app functionality. While we do not code our app to share your local data with them, these services may collect certain device or diagnostic data as part of their standard operation. The PHD team does not control these third parties, and their practices are governed by their own policies:</p>
         <ul>
             <li>
                 <strong>Google Firebase</strong> — Used to securely store your account credentials (email) for login and account recovery.
-                Firebase operates under Google's privacy standards.
                 <a href="https://firebase.google.com/support/privacy" target="_blank">View Firebase Privacy Policy &rarr;</a>
             </li>
             <li>
-                <strong>RevenueCat</strong> — Used to manage subscriptions and restore purchases. RevenueCat securely receives your email and anonymized device ID to maintain your subscription status and allow our support team to locate your purchase history.
+                <strong>RevenueCat</strong> — Used to manage subscriptions and restore purchases. They securely process your email and anonymized device identifiers to maintain your subscription.
                 <a href="https://www.revenuecat.com/privacy" target="_blank">View RevenueCat Privacy Policy &rarr;</a>
             </li>
         </ul>
-        <p>No other third-party SDKs, ad networks, or analytics tools are used in this app.</p>
     </div>
 
     <div class="manual-step">
         <h3>5. Contact Permissions (Optional)</h3>
-        <p>PHD can optionally import contacts from your phone's local address book to help you set up profiles faster.
-        This is entirely optional — you can always add contacts manually.
-        Contact data pulled into the app remains on your device and is <strong>never transmitted, uploaded, or shared with any server or third party under any circumstance</strong>.</p>
+        <p>With your explicit permission, PHD can import contacts from your phone's local address book to help you set up profiles.
+        This is entirely optional. Any contact data pulled into the app is processed locally, and the PHD team does not transmit, upload, or share this data with our servers or third parties.</p>
     </div>
 
     <div class="manual-step">
         <h3>6. Data Security</h3>
-        <p>We take security seriously:</p>
+        <p>We take the security of your account seriously:</p>
         <ul>
-            <li>Account credentials are stored in <strong>Google Firebase</strong> with industry-standard encryption.</li>
-            <li>All profile and personal data lives on your local device, protected by your device's built-in security (Face ID, passcode, etc.).</li>
-            <li>We recommend keeping your device and the app updated to benefit from the latest security improvements.</li>
+            <li>Account credentials are handled by <strong>Google Firebase</strong> using industry-standard encryption.</li>
+            <li>Profile data lives on your local device, safeguarded by your device's native security (Face ID, passcode, etc.).</li>
+            <li><strong>Disclaimer:</strong> While we strive to use commercially acceptable means to protect your information, no method of electronic storage or internet transmission is 100% secure. Therefore, we cannot guarantee absolute security against unauthorized access or device compromise.</li>
         </ul>
     </div>
 
     <div class="manual-step">
         <h3>7. Your Rights</h3>
-        <p>You are in full control of your data:</p>
+        <p>You are in control of your data:</p>
         <ul>
-            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will permanently delete your account data (email and UID) from our records.</li>
-            <li><strong>Delete your local data:</strong> Use the in-app Reset button to wipe all local data instantly, or simply uninstall the app. Either way, all profile data is permanently removed from your device.</li>
+            <li><strong>Delete your account:</strong> Contact us at ProfileHubDossier@gmail.com and we will delete your account data (email and UID) from our active database.</li>
+            <li><strong>Delete your local data:</strong> Use the in-app Reset button to wipe local data instantly, or simply uninstall the app. Either action permanently removes the profile data stored on your device.</li>
         </ul>
     </div>
 
     <div class="manual-step">
         <h3>8. Children's Privacy</h3>
         <p>PHD is not directed at children under the age of 13. We do not knowingly collect personal information from children.
-        If you believe a child has provided us with personal data, please contact us immediately and we will delete it promptly.</p>
+        If you believe a child has provided us with personal data, please contact us immediately and we will take steps to remove it.</p>
     </div>
 
     <div class="manual-step">
         <h3>9. Changes to This Policy</h3>
-        <p>We may update this Privacy Policy from time to time as the app grows and adds new features. When we do, we will update the "Last updated" date at the top of this page. Profile Hub Dossier reserves the right of final interpretation regarding the terms and explanations within this policy. Your continued use of the app after changes are posted constitutes your formal acceptance of the updated policy.</p>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. Profile Hub Dossier reserves the right of final interpretation regarding the terms within this policy. Your continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
     </div>
 
     <div class="manual-step">
